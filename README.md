@@ -1,5 +1,8 @@
 # testcafe-docker
 
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://github.com/sohwendy)
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://github.com/sohwendy/testcafe-docker)
+
 > For beginners who want to run [testcafe](https://devexpress.github.io/testcafe/) on docker
 
 ## Overview
@@ -82,25 +85,30 @@ docker run -v `pwd`/screenshots:/tests/results -it me/testcafe-docker:latest
 
 * maps host's `screenshots` folder to container's `test\results` so that you can review the output of the tests
 
-## Option 1 vs Option 2 
-### Option 1 
+## Comparisons
+
+### Option 1 vs Option 2 
+
+#### Option 1 
 - Docker configuration is transparent to user, no learning curve required.
 - Dependent on testcafe official image changes 
 
-### Option 2
+#### Option 2
 - Type less words, reduce cognitive load
 - Customise timezone display =)
 - Inflexible. Browser is fixed, test is fixed.
 - Overhead to build the image if tests changes
 
-### Option 3 - Build own image instead of relying on testcafe image.
+### Potential Options? 
+
+#### Option 3 - Build own image instead of relying on testcafe image.
 - Full flexibility of customising the commands
 
-### Option 4 - Use docker-compose 
+#### Option 4 - Use docker-compose 
 - Flexibility configure the options eg running in firefox, chrome or both, the tests to run, without incurring overheads on building the image (Option2) 
 
 
-## MISC
+## Misc
 1. Docker housekeeping, add `--rm` (`docker run --rm -v ...`) to remove docker container after tests end. takes up less disk space.
 2. Runs `docker image prune` and `docker containers prune` regularly to delete old images & container to reclaim back precious disk space
 3. add `-r teamcity` testcafe-cli to generate teamcity compatible report 
