@@ -1,5 +1,5 @@
 # use testcafe base image
-FROM  testcafe/testcafe
+FROM testcafe/testcafe:1.1.0
 
 # set the working dir - path is defined in testcafe
 WORKDIR /tests

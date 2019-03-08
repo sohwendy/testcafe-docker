@@ -43,30 +43,29 @@ teste - loads testcafe homepage and takes a screenshot
 cd to testcafe-docker folder.
 
 ```
-# get the image, current image id: 998ab9fcca9f  
-docker pull testcafe/testcafe
+docker pull testcafe/testcafe:1.1.0
 ```
 
 With Chromium
 ```
 # run internal.js
-docker run -v `pwd`:/tests -it testcafe/testcafe 'chromium:headless --no-sandbox' /tests/test/internal.js -s tests/results
+docker run -v `pwd`:/tests -it testcafe/testcafe:1.1.0 'chromium:headless --no-sandbox' /tests/test/internal.js -s tests/results
 
 # run external.js
-docker run -v `pwd`:/tests -it testcafe/testcafe 'chromium:headless --no-sandbox' /tests/test/external.js -s tests/results
+docker run -v `pwd`:/tests -it testcafe/testcafe:1.1.0 'chromium:headless --no-sandbox' /tests/test/external.js -s tests/results
 ```
 
 With Firefox
 ```
 # run internal.js
-docker run -v `pwd`:/tests -it testcafe/testcafe firefox /tests/test/internal.js -s tests/results
+docker run -v `pwd`:/tests -it testcafe/testcafe:1.1.0 firefox /tests/test/internal.js -s tests/results
 
 # run external.js
-docker run -v `pwd`:/tests -it testcafe/testcafe firefox /tests/test/external.js -s tests/results
+docker run -v `pwd`:/tests -it testcafe/testcafe:1.1.0 firefox /tests/test/external.js -s tests/results
 ```
 
 ```
-docker run -v ${HOST_TEST_FOLDER}:/${CONTAINER_TEST_FOLDER} -it testcafe/testcafe ${TESTCAFE_ARGS}
+docker run -v ${HOST_TEST_FOLDER}:/${CONTAINER_TEST_FOLDER} -it testcafe/testcafe:1.1.0 ${TESTCAFE_ARGS}
 ```
 
 * `-v ${HOST_TEST_FOLDER}:/${CONTAINER_TEST_FOLDER}` maps the host's test folder to container test folder.  
