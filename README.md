@@ -43,7 +43,7 @@ teste - loads testcafe homepage and takes a screenshot
 cd to testcafe-docker folder.
 
 ```
-docker pull testcafe/testcafe:1.1.0
+docker pull testcafe/testcafe:1.4.0-rc.1
 ```
 
 With Chromium

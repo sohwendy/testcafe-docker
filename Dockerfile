@@ -1,5 +1,5 @@
 # use testcafe base image
-FROM testcafe/testcafe:1.1.0
+FROM testcafe/testcafe:1.4.0-rc.1
 
 # set the working dir - path is defined in testcafe
 WORKDIR /tests
@@ -17,4 +17,4 @@ USER user
 
 COPY . /tests/
 
-CMD ["chromium --no-sandbox", "test/external.js", "-s", "results"]
+CMD ["chromium --no-sandbox --no-proxy-server", "test/external.js", "-s", "results"]
