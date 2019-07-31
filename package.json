@@ -6,12 +6,17 @@
     "testi": "testcafe -S -s results chrome:headless test/internal.js",
     "teste": "testcafe -S -s results chrome:headless test/external.js"
   },
-  "keywords": [ "docker", "test-cafe", "test", "test automation" ],
+  "keywords": [
+    "docker",
+    "test-cafe",
+    "test",
+    "test automation"
+  ],
   "author": "Wendy",
   "license": "MIT",
   "devDependencies": {
     "moment": "^2.24.0",
-    "testcafe": "^1.0.1",
+    "testcafe": "^1.3.3",
     "testcafe-reporter-teamcity": "^1.0.10",
     "testcafe-reporter-xunit": "^2.1.0"
   },
